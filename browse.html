@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/listings.css">
+    <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
 
@@ -46,6 +47,35 @@
     </div>
 
     <!-- MEMBER 3: search bar and filters go here -->
+         <!-- MEMBER 3: search bar and filters -->
+    <section class="filter-section" id="search">
+
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search by item name, description or location...">
+        <button type="button" id="clear-btn" class="btn btn-outline">Clear</button>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Show:</span>
+        <button type="button" class="filter-btn status-btn active" data-status="All">All</button>
+        <button type="button" class="filter-btn status-btn" data-status="Lost">Lost</button>
+        <button type="button" class="filter-btn status-btn" data-status="Found">Found</button>
+        <button type="button" class="filter-btn status-btn" data-status="Claimed">Claimed</button>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Category:</span>
+        <button type="button" class="filter-btn category-btn active" data-category="All">All</button>
+        <button type="button" class="filter-btn category-btn" data-category="Electronics">Electronics</button>
+        <button type="button" class="filter-btn category-btn" data-category="Books">Books</button>
+        <button type="button" class="filter-btn category-btn" data-category="Bags">Bags</button>
+        <button type="button" class="filter-btn category-btn" data-category="Clothing">Clothing</button>
+        <button type="button" class="filter-btn category-btn" data-category="Accessories">Accessories</button>
+        <button type="button" class="filter-btn category-btn" data-category="Others">Others</button>
+      </div>
+
+      <p id="result-count"></p>
+    </section>
 
     <!-- All item cards are placed in this container by listings.js -->
     <div id="items-container" class="items-grid"></div>
@@ -57,6 +87,32 @@
     <!-- ===== END DEVELOPER ONLY ===== -->
 
   </main>
+    <!-- MEMBER 3: item details popup -->
+  <div id="details-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button type="button" id="modal-close" class="modal-close">&times;</button>
+
+      <div id="modal-image-box" class="modal-image-box"></div>
+
+      <span id="modal-status" class="status-badge"></span>
+      <h2 id="modal-name"></h2>
+
+      <p><strong>Category:</strong> <span id="modal-category"></span></p>
+      <p><strong id="modal-date-label">Date:</strong> <span id="modal-date"></span></p>
+      <p><strong>Location:</strong> <span id="modal-location"></span></p>
+      <p><strong>Description:</strong></p>
+      <p id="modal-description"></p>
+
+      <div id="contact-box" class="contact-box"></div>
+
+      <p id="claimed-message" class="claimed-message">✅ This item has already been claimed.</p>
+
+      <div class="modal-actions" id="modal-actions">
+        <button type="button" id="contact-btn" class="btn btn-outline">Contact Owner</button>
+        <button type="button" id="claim-btn" class="btn btn-claim">Claim Item</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== FOOTER (same on every page) ===== -->
   <footer class="site-footer">
@@ -91,8 +147,9 @@
   </footer>
 
   <!-- storage.js first, then listings.js -->
-  <script src="js/storage.js"></script>
+   <script src="js/storage.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/listings.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
