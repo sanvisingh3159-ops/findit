@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindIt - Campus Lost &amp; Found Portal</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (same on every page; only the "active" class moves) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📍</span>
+      <span>
+        <strong>FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </span>
+    </a>
+
+    <button type="button" class="menu-toggle" id="menu-toggle">☰</button>
+
+    <nav id="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="browse.html">Browse Items</a>
+      <a href="report-lost.html">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+    <a href="browse.html#search" class="btn btn-primary header-search">🔍 Search Items</a>
+  </header>
+
+  <!-- ===== MAIN CONTENT (Step 2 goes here) ===== -->
+   <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Lost Something<br>on <span class="highlight">Campus?</span></h1>
+        <p>Don't worry! <strong>FindIt</strong> helps you report lost belongings, discover found items and reconnect with what's yours.</p>
+
+        <div class="hero-buttons">
+          <a href="report-lost.html" class="btn btn-primary">＋ Report Lost Item</a>
+          <a href="report-found.html" class="btn btn-outline">📦 Report Found Item</a>
+        </div>
+      </div>
+
+      <!-- Illustration area: you can replace these emojis with an image later -->
+      <div class="hero-image">
+        <div class="hero-blob">
+          <span class="hero-emoji big">🎒</span>
+          <span class="hero-emoji">📚</span>
+          <span class="hero-emoji">🧴</span>
+          <span class="hero-emoji">🎧</span>
+          <span class="hero-emoji">🪪</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-section">
+      <h2 class="section-title">How <span class="highlight">FindIt</span> Works?</h2>
+
+      <div class="steps">
+        <div class="step-card">
+          <span class="step-icon">📋</span>
+          <div>
+            <h3>1. Report</h3>
+            <p>Submit the details of your lost or found item.</p>
+          </div>
+        </div>
+
+        <span class="step-arrow">→</span>
+
+        <div class="step-card">
+          <span class="step-icon">🔍</span>
+          <div>
+            <h3>2. Search</h3>
+            <p>Browse through the available item listings.</p>
+          </div>
+        </div>
+
+        <span class="step-arrow">→</span>
+
+        <div class="step-card">
+          <span class="step-icon">🤝</span>
+          <div>
+            <h3>3. Reunite</h3>
+            <p>Contact the owner and recover your belongings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What would you like to do? -->
+    <section class="action-section">
+      <h2 class="section-title plain">What would you like to do?</h2>
+
+      <div class="action-cards">
+        <a href="report-lost.html" class="action-card lost-card">
+          <span class="action-icon">👜</span>
+          <div class="action-text">
+            <h3>Lost Something?</h3>
+            <p>Report your missing belongings and let the campus community help you find it.</p>
+          </div>
+          <span class="arrow-circle lost-arrow">→</span>
+        </a>
+
+        <a href="report-found.html" class="action-card found-card">
+          <span class="action-icon">📦</span>
+          <div class="action-text">
+            <h3>Found Something?</h3>
+            <p>Help someone get their item back by reporting what you've found.</p>
+          </div>
+          <span class="arrow-circle found-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📍 FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Report</h4>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="about.html">Contact</a>
+      </div>
+
+      <p class="footer-tagline">Connecting lost belongings with their rightful owners.</p>
+    </div>
+
+    <div class="footer-bottom">© 2026 FindIt. All Rights Reserved.</div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Lost Item - FindIt</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (same as the homepage; only the "active" link changes) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📍</span>
+      <span>
+        <strong>FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </span>
+    </a>
+
+    <button type="button" class="menu-toggle" id="menu-toggle">☰</button>
+
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse Items</a>
+      <a href="report-lost.html" class="active">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+    <a href="browse.html#search" class="btn btn-primary header-search">🔍 Search Items</a>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="form-page lost-theme">
+
+    <div class="page-banner">
+      <h1>Report a <span class="highlight">Lost</span> Item</h1>
+      <p>Fill in the details below and the campus community will help you find it.</p>
+    </div>
+
+    <div class="form-card">
+
+      <!-- Shown after the form is submitted successfully -->
+      <p id="form-message" class="form-message"></p>
+
+      <!-- novalidate: we check the fields with our own JavaScript -->
+      <form id="lost-form" novalidate>
+
+        <div class="form-group">
+          <label for="item-name">Item Name *</label>
+          <input type="text" id="item-name" placeholder="e.g. Blue Backpack">
+          <span class="error-message" id="name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category *</label>
+          <select id="category">
+            <option value="">-- Select a category --</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Books">Books</option>
+            <option value="Bags">Bags</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Others">Others</option>
+          </select>
+          <span class="error-message" id="category-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <textarea id="description" rows="4" placeholder="Colour, brand, marks or anything that helps identify it"></textarea>
+          <span class="error-message" id="description-error"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date Lost *</label>
+            <input type="date" id="date">
+            <span class="error-message" id="date-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location *</label>
+            <input type="text" id="location" placeholder="e.g. Library, 2nd floor">
+            <span class="error-message" id="location-error"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Contact Details *</label>
+          <input type="text" id="contact" placeholder="Email or 10-digit phone number">
+          <span class="error-message" id="contact-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Item Image (optional)</label>
+          <input type="file" id="image" accept="image/*">
+          <span class="error-message" id="image-error"></span>
+          <!-- Preview of the chosen image appears here -->
+          <img id="image-preview" class="image-preview" alt="Image preview">
+        </div>
+
+        <button type="submit" class="btn btn-lost submit-btn">Submit Lost Item</button>
+      </form>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📍 FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Report</h4>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="about.html">Contact</a>
+      </div>
+
+      <p class="footer-tagline">Connecting lost belongings with their rightful owners.</p>
+    </div>
+
+    <div class="footer-bottom">© 2026 FindIt. All Rights Reserved.</div>
+  </footer>
+
+  <!-- storage.js must load BEFORE lost.js -->
+  <script src="js/storage.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/lost.js"></script>
+</body>
+</html>
