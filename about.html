@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - FindIt</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (same on every page; only the "active" link changes) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📍</span>
+      <span>
+        <strong>FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </span>
+    </a>
+
+    <button type="button" class="menu-toggle" id="menu-toggle">☰</button>
+
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse Items</a>
+      <a href="report-lost.html">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="about.html" class="active">About Us</a>
+    </nav>
+
+    <a href="browse.html#search" class="btn btn-primary header-search">🔍 Search Items</a>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="form-page">
+
+    <div class="page-banner">
+      <h1>About <span style="color: var(--blue);">FindIt</span></h1>
+      <p>Connecting lost belongings with their rightful owners.</p>
+    </div>
+
+    <section class="about-section">
+      <h2>What is FindIt?</h2>
+      <p>FindIt is a campus lost and found portal. Students can report items they have lost, report items they have found, search through all reported items and contact the owner to claim them. It helps belongings get back to their owners quickly.</p>
+    </section>
+
+    <section class="about-section">
+      <h2>How it works</h2>
+      <p><strong>1. Report</strong> a lost or found item with its details and a photo. <strong>2. Search</strong> the listings by name, category or status. <strong>3. Reunite</strong> by contacting the owner and marking the item as claimed.</p>
+    </section>
+
+    <section class="about-section">
+      <h2>Technologies used</h2>
+      <ul class="tech-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>localStorage</li>
+        <li>Git &amp; GitHub</li>
+        <li>VS Code</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>Our team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>Ayushi</h3>
+          <p>Homepage and Lost Item Reporting</p>
+        </div>
+        <div class="team-card">
+          <h3>Nandini</h3>
+          <p>Found Item Reporting and Item Listings</p>
+        </div>
+        <div class="team-card">
+          <h3>Sanvi</h3>
+          <p>Search, Filter and Claim</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>About this project</h2>
+      <p>FindIt is a web development mini project built by our team of three using only HTML, CSS and JavaScript, with localStorage to save item details.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📍 FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Report</h4>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="about.html">Contact</a>
+      </div>
+
+      <p class="footer-tagline">Connecting lost belongings with their rightful owners.</p>
+    </div>
+
+    <div class="footer-bottom">© 2026 FindIt. All Rights Reserved.</div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>

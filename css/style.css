@@ -680,3 +680,73 @@ img {
     font-size: 1.7rem;
   }
 }
+/* ===== About page ===== */
+
+.about-section {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  padding: 28px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(11, 42, 107, 0.1);
+}
+
+.about-section h2 {
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: var(--muted);
+}
+
+/* Row of technology labels */
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.tech-list li {
+  padding: 6px 14px;
+  background: var(--light-blue);
+  color: var(--navy);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Team cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.team-card {
+  padding: 18px;
+  background: var(--soft-bg);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.team-card h3 {
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    margin: 0 14px 20px;
+    padding: 20px;
+  }
+}
