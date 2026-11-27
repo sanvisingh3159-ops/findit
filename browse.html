@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Items - FindIt</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/listings.css">
+</head>
+<body>
+
+  <!-- ===== HEADER (same on every page; only the "active" link changes) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📍</span>
+      <span>
+        <strong>FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </span>
+    </a>
+
+    <button type="button" class="menu-toggle" id="menu-toggle">☰</button>
+
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html" class="active">Browse Items</a>
+      <a href="report-lost.html">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+    <a href="browse.html#search" class="btn btn-primary header-search">🔍 Search Items</a>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="form-page">
+
+    <div class="page-banner">
+      <h1>Browse <span style="color: var(--blue);">Items</span></h1>
+      <p>See what has been lost and found around campus.</p>
+    </div>
+
+    <!-- MEMBER 3: search bar and filters go here -->
+
+    <!-- All item cards are placed in this container by listings.js -->
+    <div id="items-container" class="items-grid"></div>
+        <!-- ===== DEVELOPER ONLY: delete this whole block before final submission ===== -->
+    <div class="dev-tools" style="text-align: center; padding: 10px 20px 30px;">
+      <button type="button" id="load-sample-btn" class="btn btn-outline">Load Sample Data</button>
+      <button type="button" id="clear-data-btn" class="btn btn-outline">Clear All Data</button>
+    </div>
+    <!-- ===== END DEVELOPER ONLY ===== -->
+
+  </main>
+
+  <!-- ===== FOOTER (same on every page) ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>📍 FindIt.</strong>
+        <small>Campus Lost &amp; Found Portal</small>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse Items</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Report</h4>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="about.html">Contact</a>
+      </div>
+
+      <p class="footer-tagline">Connecting lost belongings with their rightful owners.</p>
+    </div>
+
+    <div class="footer-bottom">© 2026 FindIt. All Rights Reserved.</div>
+  </footer>
+
+  <!-- storage.js first, then listings.js -->
+  <script src="js/storage.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/listings.js"></script>
+</body>
+</html>
